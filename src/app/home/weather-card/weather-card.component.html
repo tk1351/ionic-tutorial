@@ -1,0 +1,29 @@
+<ion-card color="primary">
+  <ion-card-content class="weather-card-container">
+    <header class="weather-card-header">
+      <p class="weather-card-time">
+        @if (date() !== null) {
+          <time [attr.datetime]="date()! * 1000 | date: 'yyyy-MM-dd'">{{
+            date()! * 1000 | date: "EEEE, d MMMM"
+          }}</time>
+        } @else {
+          foobar
+        }
+      </p>
+      <p class="weather-card-area">Tokyo, Japan</p>
+      <p><ion-icon name="sunny" class="weather-card-icon"></ion-icon></p>
+      <p class="weather-card-temperature--now">
+        24<span class="weather-card-unit">℃</span>
+      </p>
+      <p class="weather-card-content">Mostly Sunny</p>
+    </header>
+    <footer class="weather-card-footer">
+      <p class="weather-card-temperature">
+        High<span class="weather-card-temperature--value">27℃</span>
+      </p>
+      <p class="weather-card-temperature">
+        Low<span class="weather-card-temperature--value">14℃</span>
+      </p>
+    </footer>
+  </ion-card-content>
+</ion-card>
